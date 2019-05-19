@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Login App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in">sign in</string>
+    <string name="sign_up">sign Up</string>
+    <string name="email_or_username">Email or Username</string>
+    <string name="hint_email">example@example.com</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login_with">Login With</string>
+    <string name="email_">Email</string>
+    <string name="user_name">User Name</string>
+
+    <string name="facebook_app_id">361214611187439</string>
+    <string name="fb_login_protocol_scheme">fb361214611187439</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="age">Age</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="save">Save</string>
+    <string name="forgot_password_">Forgot Password</string>
+    <string name="add_your_emile_to_reset_n_your_password">Add Your Emile to Reset  \nYour Password</string>
+    <string name="send">Send</string>
+    <string name="add_your_new_password_and_confirm_it">Add Your New Password \nand Confirm it</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="submit">Submit</string>
+
+</resources>

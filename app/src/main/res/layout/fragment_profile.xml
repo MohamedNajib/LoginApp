@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ProfileFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/dimens_124"
+                android:layout_height="@dimen/dimens_124"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginTop="@dimen/dimension60"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ModifyProfileImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/modify_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image" />
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_420"
+                android:layout_marginStart="@dimen/dimens_34"
+                android:layout_marginTop="@dimen/dimension24"
+                android:layout_marginEnd="@dimen/dimens_34"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/dimension16"
+                app:cardElevation="@dimen/dimension12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Text_Email_Register"
+                        style="@style/email_or_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimension16"
+                        android:text="@string/email_"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/RegisterEditTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimens_9"
+                        android:layout_marginEnd="@dimen/dimension24"
+                        android:background="@drawable/et_background"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#ff212121"
+                        android:textSize="@dimen/text16"
+                        android:freezesText="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Text_Email_Register" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimension1"
+                        android:layout_gravity="center"
+                        android:background="#fff1f1f1"
+                        app:layout_constraintBottom_toTopOf="@+id/view2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Text_MobileNumber_Register"
+                        style="@style/email_or_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimension16"
+                        android:text="@string/mobile_number"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+                    <EditText
+                        android:id="@+id/RegisterEditTextMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimens_9"
+                        android:layout_marginEnd="@dimen/dimension24"
+                        android:background="@drawable/et_background"
+                        android:hint="@string/mobile_number"
+                        android:inputType="phone"
+                        android:textColor="#ff212121"
+                        android:textSize="@dimen/text16"
+                        android:freezesText="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Text_MobileNumber_Register" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimension1"
+                        android:layout_gravity="center"
+                        android:background="#fff1f1f1"
+                        app:layout_constraintBottom_toTopOf="@+id/view3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+                    <TextView
+                        android:id="@+id/Text_Age_Profile"
+                        style="@style/email_or_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="@dimen/dimension16"
+                        android:text="@string/age"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                    <EditText
+                        android:id="@+id/ProfileEditTextAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimens_9"
+                        android:layout_marginEnd="@dimen/dimension24"
+                        android:background="@drawable/et_background"
+                        android:hint="@string/age"
+                        android:inputType="number"
+                        android:textColor="#ff212121"
+                        android:textSize="@dimen/text16"
+                        android:freezesText="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Text_Age_Profile" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimension1"
+                        android:layout_gravity="center"
+                        android:background="#fff1f1f1"
+                        app:layout_constraintBottom_toTopOf="@+id/view4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                    <TextView
+                        android:id="@+id/Text_Country_Profile"
+                        style="@style/email_or_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="@dimen/dimension16"
+                        android:text="@string/country"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                    <Spinner
+                        android:id="@+id/SpinnerCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimens_9"
+                        android:layout_marginEnd="@dimen/dimension24"
+                        android:background="@drawable/et_background"
+                        android:drawSelectorOnTop="false"
+                        android:maxLines="1"
+                        android:popupBackground="@android:color/transparent"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Text_Country_Profile" />
+
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimension1"
+                        android:layout_gravity="center"
+                        android:background="#fff1f1f1"
+                        app:layout_constraintBottom_toTopOf="@+id/view5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                    <TextView
+                        android:id="@+id/Text_City_Profile"
+                        style="@style/email_or_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimension16"
+                        android:text="@string/city"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                    <Spinner
+                        android:id="@+id/SpinnerCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimens_9"
+                        android:layout_marginEnd="@dimen/dimension24"
+                        android:background="@drawable/et_background"
+                        android:drawSelectorOnTop="false"
+                        android:maxLines="1"
+                        android:popupBackground="@android:color/transparent"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Text_City_Profile" />
+
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimension1"
+                        android:layout_gravity="center"
+                        android:background="#fff1f1f1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                    <TextView
+                        android:id="@+id/Text_Password_Profile"
+                        style="@style/email_or_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="@dimen/dimension16"
+                        android:text="@string/password"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+                    <EditText
+                        android:id="@+id/ProfileEditTextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimens_9"
+                        android:layout_marginEnd="@dimen/dimension24"
+                        android:background="@drawable/et_background"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:textColor="#ff212121"
+                        android:textSize="@dimen/text16"
+                        android:freezesText="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Text_Password_Profile" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                style="@style/save_btn"
+                android:layout_width="@dimen/dimens_215"
+                android:layout_height="@dimen/dimens_48"
+                android:layout_marginTop="@dimen/dimension50"
+                android:layout_marginBottom="@dimen/dimens_56"
+                android:text="@string/save"
+                android:background="@drawable/save_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

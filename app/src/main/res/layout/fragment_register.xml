@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.RegisterFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/register_background" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimension80"
+                android:layout_marginStart="@dimen/dimens_34"
+                android:layout_marginTop="@dimen/dimens_92"
+                android:layout_marginEnd="@dimen/dimens_34"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/dimension16"
+                app:cardElevation="@dimen/dimension12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/Register_Btn_SignIn"
+                    style="@style/sign_up"
+                    android:layout_width="@dimen/dimens_124"
+                    android:layout_height="@dimen/dimens_40"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/dimension24"
+                    android:layout_marginTop="@dimen/text20"
+                    android:layout_marginBottom="@dimen/text20"
+                    android:gravity="center"
+                    android:text="@string/sign_in" />
+
+                <Button
+                    android:id="@+id/Register_Btn_SignUp"
+                    style="@style/sign_in"
+                    android:layout_width="@dimen/dimens_124"
+                    android:layout_height="@dimen/dimens_40"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dimens_20"
+                    android:layout_marginEnd="@dimen/dimension24"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_light_blue"
+                    android:text="@string/sign_up" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="@dimen/dimension0"
+                android:layout_height="@dimen/dimens_210"
+                android:layout_marginTop="@dimen/dimens_34"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/dimension16"
+                app:cardElevation="@dimen/dimension12"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Text_Email_Register"
+                        style="@style/email_or_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimension16"
+                        android:text="@string/email_"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/RegisterEditTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimens_9"
+                        android:layout_marginEnd="@dimen/dimension24"
+                        android:background="@drawable/et_background"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#ff212121"
+                        android:textSize="@dimen/text16"
+                        android:freezesText="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Text_Email_Register" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimension1"
+                        android:layout_gravity="center"
+                        android:background="#fff1f1f1"
+                        app:layout_constraintBottom_toTopOf="@+id/view2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Text_UserName_Register"
+                        style="@style/email_or_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimension16"
+                        android:text="@string/user_name"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+                    <EditText
+                        android:id="@+id/RegisterEditTextUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimens_9"
+                        android:layout_marginEnd="@dimen/dimension24"
+                        android:background="@drawable/et_background"
+                        android:hint="@string/user_name"
+                        android:inputType="text"
+                        android:textColor="#ff212121"
+                        android:textSize="@dimen/text16"
+                        android:freezesText="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Text_UserName_Register" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimension1"
+                        android:layout_gravity="center"
+                        android:background="#fff1f1f1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+                    <TextView
+                        android:id="@+id/Text_Password_Register"
+                        style="@style/email_or_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="@dimen/dimension16"
+                        android:text="@string/password"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                    <EditText
+                        android:id="@+id/RegisterEditTextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimension24"
+                        android:layout_marginTop="@dimen/dimens_9"
+                        android:layout_marginEnd="@dimen/dimension24"
+                        android:background="@drawable/et_background"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:textColor="#ff212121"
+                        android:textSize="@dimen/text16"
+                        android:freezesText="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Text_Password_Register" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/RegisterButtonSignUp"
+                style="@style/sign_up_btn"
+                android:layout_width="@dimen/dimens_215"
+                android:layout_height="@dimen/dimens_48"
+                android:layout_marginTop="@dimen/dimens_40"
+                android:background="@drawable/sigein_btn"
+                android:text="@string/sign_up"
+                app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="@+id/cardView2"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+            <TextView
+                style="@style/log_in_wit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_118"
+                android:text="@string/login_with"
+                app:layout_constraintEnd_toEndOf="@+id/RegisterButtonSignUp"
+                app:layout_constraintStart_toStartOf="@+id/RegisterButtonSignUp"
+                app:layout_constraintTop_toBottomOf="@+id/RegisterButtonSignUp" />
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
+

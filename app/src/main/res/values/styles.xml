@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="sign_up">
+        <item name="android:textColor">#ff212121</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="sign_in">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="email_or_u">
+        <item name="android:textColor">#ffd8d8d8</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="forgot_pas">
+        <item name="android:textColor">#fffbfbfe</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="sign_in_ptn">
+        <item name="android:textColor">#ff0065ff</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="log_in_wit">
+        <item name="android:textColor">#ff212121</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="sign_up_btn">
+        <item name="android:textColor">#ff00d6d3</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="save_btn">
+        <item name="android:textColor">#fffbfbfe</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="forget_pas">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="add_your_e">
+        <item name="android:textColor">#b3fbfbfe</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>
