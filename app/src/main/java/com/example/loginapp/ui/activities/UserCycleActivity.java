@@ -30,9 +30,9 @@ public class UserCycleActivity extends AppCompatActivity {
             w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
 
-        //HelperMethod.replaceFragments(new LoginFragment(), getSupportFragmentManager(), R.id.FragmentContainer);
+        HelperMethod.replaceFragments(new LoginFragment(), getSupportFragmentManager(), R.id.FragmentContainer);
         //HelperMethod.replaceFragments(new ProfileFragment(), getSupportFragmentManager(), R.id.FragmentContainer);
-        HelperMethod.replaceFragments(new ForgotPasswordSecondStepFragment(), getSupportFragmentManager(), R.id.FragmentContainer);
+        //HelperMethod.replaceFragments(new ForgotPasswordSecondStepFragment(), getSupportFragmentManager(), R.id.FragmentContainer);
     }
 
     @Override

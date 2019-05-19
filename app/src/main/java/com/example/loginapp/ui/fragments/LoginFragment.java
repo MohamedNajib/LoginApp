@@ -1,6 +1,7 @@
 package com.example.loginapp.ui.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,12 +9,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.bumptech.glide.request.RequestOptions;
 import com.example.loginapp.R;
 import com.example.loginapp.helper.BackPressedListener;
 import com.example.loginapp.helper.HelperMethod;
 import com.example.loginapp.helper.UserInputValidation;
 import com.example.loginapp.ui.activities.UserCycleActivity;
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Objects;
 
@@ -34,6 +49,10 @@ public class LoginFragment extends Fragment {
     EditText LoginEditTextEmail;
     @BindView(R.id.EditTextPassword)
     EditText EditTextPassword;
+    @BindView(R.id.LoginFacebookButton)
+    LoginButton LoginFacebookButton;
+
+    private CallbackManager mCallbackManager;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -53,7 +72,80 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         unbinder = ButterKnife.bind(this, view);
+
+        mCallbackManager = CallbackManager.Factory.create();
+        LoginFacebookButton.setPermissions("email", "public_profile");
+
+        LoginFacebookButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+
+            }
+        });
         return view;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        mCallbackManager.onActivityResult(requestCode,resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    AccessTokenTracker accessTokenTracker = new AccessTokenTracker() {
+        @Override
+        protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
+
+            if (currentAccessToken == null){
+                Toast.makeText(getContext(), "User Log Out", Toast.LENGTH_SHORT).show();
+
+            }else {
+                getUserProfile(currentAccessToken);
+            }
+        }
+    };
+
+    private String email;
+    private void getUserProfile(AccessToken accessToken){
+        final GraphRequest graphRequest = GraphRequest.newMeRequest(accessToken, new GraphRequest.GraphJSONObjectCallback() {
+            @Override
+            public void onCompleted(JSONObject object, GraphResponse response) {
+
+                try {
+                    String First_name = object.getString("First_name");
+                    String last_name = object.getString("last_name");
+                    email = object.getString("email");
+                    String id = object.getString("id");
+
+                    String imagUrl = "https://graph.facebook.com/" + id + "/picture?type=normal";
+
+                    Toast.makeText(getContext(),email , Toast.LENGTH_SHORT).show();
+
+                    RequestOptions requestOptions = new RequestOptions();
+                    requestOptions.dontAnimate();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+        Bundle bundle = new Bundle();
+        bundle.putString("fields", "First_name,last_name,email,id");
+        graphRequest.setParameters(bundle);
+        graphRequest.executeAsync();
+        Toast.makeText(getContext(),email , Toast.LENGTH_SHORT).show();
+
     }
 
     /**
@@ -85,8 +177,6 @@ public class LoginFragment extends Fragment {
         super.onDestroyView();
         unbinder.unbind();
     }
-
-
 
 
     @OnClick({R.id.LoginBtn_SignUp, R.id.LoginTextViewForgotPassword, R.id.LoginButton})
@@ -123,4 +213,7 @@ public class LoginFragment extends Fragment {
     }
 
 
+    @OnClick(R.id.LoginFacebookButton)
+    public void onViewClicked() {
+    }
 }
