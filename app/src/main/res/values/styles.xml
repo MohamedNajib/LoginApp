@@ -66,4 +66,29 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="categories">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="car_wash">
+        <item name="android:textColor">#ff0065ff</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="house_clea">
+        <item name="android:textColor">#fff8f8fd</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+
+
+    <style name="FacebookLoginButton">
+        <item name="android:textSize">@dimen/text16</item>
+        <item name="android:background">@drawable/ic_facebook</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
 </resources>

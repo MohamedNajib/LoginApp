@@ -26,5 +26,9 @@
     <string name="add_your_new_password_and_confirm_it">Add Your New Password \nand Confirm it</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="submit">Submit</string>
+    <string name="categories">Categories</string>
+    <string name="car_wash">Car Wash</string>
+    <string name="house_cleaning">House Cleaning</string>
+    <string name="laundry">Laundry</string>
 
 </resources>
