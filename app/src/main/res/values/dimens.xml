@@ -53,5 +53,8 @@
     <dimen name="dimens_140">140dp</dimen>
     <dimen name="dimens_420">420dp</dimen>
     <dimen name="dimens_56">56dp</dimen>
+    <dimen name="dimens_90">90dp</dimen>
+    <dimen name="dimens_33">33dp</dimen>
+    <dimen name="dimens_180">180dp</dimen>
 
 </resources>

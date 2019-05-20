@@ -81,6 +81,39 @@
         <item name="android:textSize">22sp</item>
     </style>
 
+    <style name="profile">
+        <item name="android:textColor">#fffbfbfe</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="sign_out">
+        <item name="android:textColor">#ffff0000</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="mohammed_a">
+        <item name="android:textColor">#fffbfbfe</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+
+    <style name="cairo">
+        <item name="android:textColor">#fffbfbfe</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="edit">
+        <item name="android:textColor">#fffbfbfe</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="orders">
+        <item name="android:textColor">#ff006efc</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
 
 
     <style name="FacebookLoginButton">
