@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.CategoriesFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/category_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/categories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp">
+
+            <FrameLayout
+                android:id="@+id/frameLayoutCarWash"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/item_white"
+                android:elevation="@dimen/dimension12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/dimension60"
+                    android:layout_height="@dimen/dimension60"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/dimens_34"
+                    android:layout_marginTop="@dimen/dimens_34"
+                    app:srcCompat="@drawable/ic_noun_car_wash" />
+
+                <TextView
+                    style="@style/car_wash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="@dimen/dimens_40"
+                    android:layout_marginBottom="33dp"
+                    android:text="@string/car_wash" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLayoutHouseCleaning"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/item_blue"
+                android:elevation="@dimen/dimension12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayoutCarWash">
+
+                <ImageView
+                    android:layout_width="@dimen/dimension60"
+                    android:layout_height="@dimen/dimension60"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/dimens_34"
+                    android:layout_marginTop="@dimen/dimens_34"
+                    app:srcCompat="@drawable/ic_house" />
+
+                <TextView
+                    style="@style/house_clea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="@dimen/dimens_40"
+                    android:layout_marginBottom="33dp"
+                    android:text="@string/house_cleaning" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/FrameLayoutLaundry"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/item_light_blue"
+                android:elevation="@dimen/dimension12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayoutHouseCleaning">
+
+                <ImageView
+                    android:layout_width="@dimen/dimension60"
+                    android:layout_height="@dimen/dimension60"
+                    android:layout_marginStart="@dimen/dimens_34"
+                    android:layout_marginTop="@dimen/dimens_34"
+                    app:srcCompat="@drawable/ic_wash"
+                    android:layout_gravity="start"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="@dimen/dimens_40"
+                    android:layout_marginBottom="33dp"
+                    style="@style/house_clea"
+                    android:text="@string/laundry"/>
+            </FrameLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
